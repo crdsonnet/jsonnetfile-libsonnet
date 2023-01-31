@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$ref": "#/$defs/jsonnetFile",
+  "$defs": {
+    "Dependency": {
+      "properties": {
+        "source": {
+          "$ref": "#/$defs/Source"
+        },
+        "version": {
+          "type": "string"
+        },
+        "sum": {
+          "type": "string"
+        },
+        "single": {
+          "type": "boolean"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "source",
+        "version"
+      ]
+    },
+    "Git": {
+      "properties": {
+        "Scheme": {
+          "type": "string"
+        },
+        "Host": {
+          "type": "string"
+        },
+        "User": {
+          "type": "string"
+        },
+        "Repo": {
+          "type": "string"
+        },
+        "Subdir": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "Scheme",
+        "Host",
+        "User",
+        "Repo",
+        "Subdir"
+      ]
+    },
+    "Local": {
+      "properties": {
+        "directory": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "directory"
+      ]
+    },
+    "Source": {
+      "properties": {
+        "git": {
+          "$ref": "#/$defs/Git"
+        },
+        "local": {
+          "$ref": "#/$defs/Local"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object"
+    },
+    "jsonnetFile": {
+      "properties": {
+        "version": {
+          "type": "integer"
+        },
+        "dependencies": {
+          "items": {
+            "$ref": "#/$defs/Dependency"
+          },
+          "type": "array"
+        },
+        "legacyImports": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "version",
+        "dependencies",
+        "legacyImports"
+      ]
+    }
+  }
+}
