@@ -1,4 +1,4 @@
-local crdsonnet = import 'github.com/Duologic/crdsonnet/crdsonnet/main.libsonnet';
+local crdsonnet = import 'github.com/crdsonnet/crdsonnet/crdsonnet/main.libsonnet';
 local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
 
 local schema = import 'schema.json';
@@ -27,7 +27,7 @@ local parsed = crdsonnet.fromSchema(
     '#'::
       d.pkg(
         name='jsonnetfile',
-        url='github.com/Duologic/jsonnetfile-libsonnet/jsonnetfile',
+        url='github.com/crdsonnet/jsonnetfile-libsonnet/jsonnetfile',
         help=|||
           `jsonnetfile` can generate jsonnetfile.json for [jsonnet-bundler](https://github.com/jsonnet-bundler/jsonnet-bundler)
         |||,

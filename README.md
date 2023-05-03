@@ -1,4 +1,4 @@
-# package jsonnetfile
+# jsonnetfile
 
 `jsonnetfile` can generate jsonnetfile.json for [jsonnet-bundler](https://github.com/jsonnet-bundler/jsonnet-bundler)
 
@@ -6,13 +6,13 @@
 ## Install
 
 ```
-jb install github.com/Duologic/jsonnetfile-libsonnet/jsonnetfile@master
+jb install github.com/crdsonnet/jsonnetfile-libsonnet/jsonnetfile@master
 ```
 
 ## Usage
 
 ```jsonnet
-local jsonnetfile = import "github.com/Duologic/jsonnetfile-libsonnet/jsonnetfile/main.libsonnet";
+local jsonnetfile = import "github.com/crdsonnet/jsonnetfile-libsonnet/jsonnetfile/main.libsonnet";
 
 jsonnetfile.new(legacyImports=false)
 
