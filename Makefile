@@ -1,5 +1,8 @@
-jsonnetfile/schema.json:
-	cd go && go run . > ../jsonnetfile/schema.json
+generator/schema.json:
+	cd go && go run . > ../generator/schema.json
+
+jsonnetfile/raw.libsonnet:
+	jsonnet -J generator/vendor -S generator/main.libsonnet | jsonnetfmt - > jsonnetfile/raw.libsonnet
 
 README.md:
 	cd jsonnetfile && \

@@ -23,11 +23,11 @@ jsonnetfile.new(legacyImports=false)
 * [`fn new(legacyImports=true)`](#fn-new)
 * [`fn withDependencies(value)`](#fn-withdependencies)
 * [`fn withDependenciesMixin(value)`](#fn-withdependenciesmixin)
-* [`fn withLegacyImports(value)`](#fn-withlegacyimports)
+* [`fn withLegacyImports(value=true)`](#fn-withlegacyimports)
 * [`fn withVersion(value)`](#fn-withversion)
 * [`obj dependencies`](#obj-dependencies)
   * [`fn withName(value)`](#fn-dependencieswithname)
-  * [`fn withSingle(value)`](#fn-dependencieswithsingle)
+  * [`fn withSingle(value=true)`](#fn-dependencieswithsingle)
   * [`fn withSource(value)`](#fn-dependencieswithsource)
   * [`fn withSourceMixin(value)`](#fn-dependencieswithsourcemixin)
   * [`fn withSum(value)`](#fn-dependencieswithsum)
@@ -76,7 +76,7 @@ withDependenciesMixin(value)
 ### fn withLegacyImports
 
 ```ts
-withLegacyImports(value)
+withLegacyImports(value=true)
 ```
 
 
@@ -103,7 +103,7 @@ withName(value)
 #### fn dependencies.withSingle
 
 ```ts
-withSingle(value)
+withSingle(value=true)
 ```
 
 
